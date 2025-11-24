@@ -1,0 +1,117 @@
+@use "../abstracts/_helpers.scss" as *;
+.container__passo {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  justify-content: start;
+  gap: 6rem;
+}
+
+.grid--passo {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  row-gap: 6rem;
+  align-self: center;
+
+  @include respond(small) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 3.12rem;
+  }
+
+  @include respond(tiny) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.img__lira {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+
+  @include respond(small) {
+    max-width: 30rem;
+    grid-row: auto;
+    justify-self: center;
+    grid-column: 1 / span 2;
+  }
+
+  @include respond(tiny) {
+    grid-column: auto;
+  }
+}
+
+.img__seta {
+  width: 4.1rem;
+
+  @include respond(small) {
+    width: 3.5rem;
+  }
+
+  @include respond(tiny) {
+    width: 3.32rem;
+  }
+}
+
+.cabecalho__titulo {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1.6rem;
+
+  .titulo {
+    font-size: 4.78rem;
+    line-height: 1;
+    font-weight: 400;
+
+    @include respond(small) {
+      font-size: 3.98rem;
+    }
+
+    @include respond(tiny) {
+      font-size: 3.09rem;
+    }
+
+    span {
+      color: #256783;
+      font-weight: 600;
+    }
+  }
+}
+
+.passo {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1.6rem;
+}
+
+.passo__cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+
+  .passo__texto {
+    font-size: 2.76rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .passo__texto--azul {
+    color: #256783;
+  }
+}
+
+.passo__icone {
+  background-color: #256783;
+  width: 4.3rem;
+  height: 4.3rem;
+  padding: 0.82rem;
+  border-radius: 0.8rem;
+
+  @include respond(tiny) {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}

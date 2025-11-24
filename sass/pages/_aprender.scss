@@ -1,0 +1,100 @@
+@use "../abstracts/_helpers.scss" as *;
+
+.container__aprender {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+
+  @include respond(small) {
+    gap: 4rem;
+  }
+}
+
+.cabecalho__aprender {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  gap: 2rem;
+
+  .img__seta {
+    @include respond(small) {
+      width: 6rem;
+    }
+
+    @include respond(tiny) {
+      width: 3.32rem;
+    }
+  }
+
+  .titulo {
+    font-size: 4.78rem;
+    font-weight: 400;
+
+    @include respond(small) {
+      font-size: 3.98rem;
+    }
+
+    @include respond(tiny) {
+      font-size: 2.76rem;
+    }
+
+    span {
+      color: #256783;
+      font-weight: 600;
+    }
+  }
+}
+
+.grid__aprender {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+
+  @include respond(small) {
+    gap: 2rem;
+  }
+
+  @include respond(tiny) {
+    grid-template-columns: 1fr;
+    gap: 3.12rem;
+  }
+
+  .aprender-img {
+    border-radius: 2rem;
+    transition: transform ease 200ms;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @include respond(tiny) {
+      max-width: 45rem;
+    }
+  }
+}
+
+.botao__aprender {
+  margin-top: 3.12rem;
+  padding: 1rem 2.5rem;
+  align-self: center;
+  background-color: #ffd24a;
+  border-radius: 5rem;
+  font-size: 1.92rem;
+  border: 2px solid #7d5e00;
+  border-right: 4px solid #7d5e00;
+  border-bottom: 4px solid #7d5e00;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+
+  &:hover {
+    border-width: 3px;
+  }
+
+  @include respond(small) {
+    font-size: 1.6rem;
+  }
+}

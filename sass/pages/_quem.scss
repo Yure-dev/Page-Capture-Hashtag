@@ -1,0 +1,92 @@
+@use "../abstracts/_helpers.scss" as *;
+
+.secao__quem {
+  background-image: url(https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/62cefb1ecf7f4662905b5b1e_%5BBACKGROUND%5D%20-%20BANNER%2005%20-%20desktop.webp);
+  background-size: cover;
+  background-position-y: 100%;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  padding-bottom: 0;
+  padding-top: 21rem;
+  margin-top: -10rem;
+
+  @include respond(small) {
+    padding-top: 17rem;
+    margin-top: -6rem;
+    background-image: url("https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/62cefd163d834a0c0b773480_%5BBACKGROUND%5D%20-%20BANNER%2005%20-%20mobile.webp");
+  }
+
+  @include respond(tiny) {
+    padding-top: 12rem;
+    margin-top: -5rem;
+  }
+}
+
+.container__quem {
+  position: relative;
+  width: 100%;
+
+  @include respond(small) {
+    flex-flow: column;
+    align-items: center;
+    gap: 3.12rems;
+  }
+}
+
+.quem {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 3.12rem;
+  align-items: stretch;
+  justify-content: start;
+  color: #ffffff;
+  max-width: 50%;
+  width: 100%;
+  margin-bottom: 6.1rem;
+
+  @include respond(small) {
+    max-width: 53rem;
+    margin-bottom: 0rem;
+  }
+
+  .cabecalho__quem {
+    border-left: solid 4px #eebe2a;
+    padding-left: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+
+    @include respond(tiny) {
+    }
+
+    .h1--laranja {
+      color: #eebe2a;
+    }
+  }
+
+  .quem__textos {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: start;
+    gap: 1.6rem;
+
+    span {
+      color: #eebe2a;
+      font-weight: 600;
+    }
+  }
+}
+
+.imagem__lira {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45%;
+
+  @include respond(small) {
+    position: relative;
+    margin-top: 1rem;
+    max-width: 40rem;
+    width: 100%;
+  }
+}

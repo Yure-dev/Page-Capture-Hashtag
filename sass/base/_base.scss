@@ -1,0 +1,29 @@
+@use "../abstracts/_helpers.scss" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(big) {
+    font-size: 56.25%;
+  }
+
+  @include respond(medium) {
+    font-size: 50%;
+  }
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+.grid {
+  display: grid;
+}

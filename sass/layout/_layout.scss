@@ -1,0 +1,27 @@
+@use "../abstracts/_helpers.scss" as *;
+
+.secao {
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+  padding: 6.1rem 2rem;
+
+  @include respond(tiny) {
+    padding: 3.09rem 2rem;
+  }
+}
+.container {
+  display: flex;
+  max-width: 100rem;
+  margin: auto;
+}
+
+.secao__disclaimer {
+  padding: 3.12rem 2rem;
+  background-color: #e1e1e1;
+  box-shadow: 0.5rem 1rem -0.2rem rgba(0, 0, 0, 0.15);
+}
+
+.disclaimer__paragrafo {
+  font-size: 1.33rem;
+}

@@ -1,0 +1,33 @@
+@use "../abstracts/_helpers.scss" as *;
+
+.rodape {
+  padding: 4.88rem 2rem;
+}
+
+.container__rodape {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  @include respond(small) {
+    justify-content: center;
+  }
+
+  img {
+    width: 3.7rem;
+    height: 3.7rem;
+  }
+
+  .rodape__textos {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: start;
+    gap: 0.8rem;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

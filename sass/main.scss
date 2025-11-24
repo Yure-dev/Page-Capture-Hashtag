@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+// 1. Abstracts
+@use "./abstracts/_helpers.scss" as *;
+
+// 2. Base stuff
+@use "base/base";
+@use "base/typography";
+
+// 3. Components
+@use "components/button";
+@use "components/caixa";
+@use "components/popup";
+
+// 4. Layout-related sections
+@use "layout/layout";
+
+// 5. Pages
+@use "pages/inscricao";
+@use "pages/passo";
+@use "pages/aprender";
+@use "pages/quem";
+@use "pages/rodape";
